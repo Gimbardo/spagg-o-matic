@@ -1,5 +1,5 @@
 # spagg-o-matic
-spagg-o-matic saves from WIkipedia random daily facts, stores them into Redis, and serves them via API
+spagg-o-matic saves from Wikipedia random daily facts, stores them into Redis, and serves them via API
 
 ## Requiremens
 Just Python3, Pipenv, and Redis
