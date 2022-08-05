@@ -12,13 +12,11 @@ Just setup pipenv:
 
 ### Host spagg-o-matic
 To host spagg-o-matic just launch main.py, via pipenv:
-- pipenv shell
-- python main.py
+- pipenv run main.py
 
 ### Synch Redis
 To synch current day to redisDb:
-- pipenv shell
-- python syncher.py
+- pipenv run syncher.py
 
 ### Cron
 You can just use a daily cron ('0 0 * * *') to automatically synch Redis daily
