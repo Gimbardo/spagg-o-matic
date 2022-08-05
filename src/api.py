@@ -1,11 +1,9 @@
 from typing import Union
 from fastapi import FastAPI
-from .facterinator import Facterinator
-
-print("test")
+from src.redis_interface import RedisInterface
 
 app = FastAPI()
-f = Facterinator()
+f = RedisInterface()
 
 @app.get("/ping")
 def ping():
