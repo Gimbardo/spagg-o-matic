@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import datetime
 from requests import get
 import wikipediaapi
