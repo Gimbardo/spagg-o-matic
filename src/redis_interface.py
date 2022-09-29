@@ -3,7 +3,7 @@ from src.fact import Fact
 import random
 
 class RedisInterface:
-  def __init__(self, host='localhost', port=6379, db=0):
+  def __init__(self, host='redis', port=6379, db=0):
     self.r = redis.Redis(host, port, db)
 
   def save(self, key, content):
@@ -12,8 +12,6 @@ class RedisInterface:
   def random_fact(self):
     key = random.choice(self.r.keys('*'))
     fact = Fact(self.r.get(key).decode('utf-8'))
-    print(self.r.get(key).decode('utf-8'))
-    print(fact.year)
     return {fact.year: fact.info}
 
   def flush_db(self):

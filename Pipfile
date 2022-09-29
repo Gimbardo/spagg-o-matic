@@ -9,6 +9,8 @@ uvicorn = {extras = ["standard"], version = "*"}
 redis = "*"
 requests = "*"
 wikipedia-api = "*"
+schedule = "*"
+asyncio = "*"
 
 [dev-packages]
 

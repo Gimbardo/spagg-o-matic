@@ -6,5 +6,4 @@ class Fact:
     self.info = '-'.join(content.split("-")[1:])[1:]
 
   def save(self, redis_interface, key):
-    print(self.year + " - " + self.info)
     redis_interface.save(key, self.year+" - "+self.info)
