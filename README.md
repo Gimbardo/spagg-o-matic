@@ -4,19 +4,26 @@ spagg-o-matic saves from Wikipedia random daily facts, stores them into Redis, a
 ## Requiremens
 Just Python3, Pipenv, and Redis
 
-## Getting Started
+---
 
 ### Setup
+
+#### without Docker
 Just setup pipenv:
 - pipenv install / pipenv sync
 
+#### with Docker
+- docker compose build
+
+---
+
 ### Host spagg-o-matic
+
+#### without Docker
 To host spagg-o-matic just launch main.py, via pipenv:
 - pipenv run main.py
 
-### Synch Redis
-To synch current day to redisDb:
-- pipenv run syncher.py
+#### with Docker
+- docker compose up
 
-### Cron
-You can just use a daily cron ('0 0 * * *') to automatically synch Redis daily
+---
