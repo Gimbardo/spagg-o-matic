@@ -3,9 +3,10 @@ services:
   spaggomatic:
     build: .
     ports:
-      - 3001:80
+      - 3000:80
     environment:
       REDIS_ADDRESS: redis
+      POLL_INTERVAL: 120
   redis:
     image: redis
     command: redis-server

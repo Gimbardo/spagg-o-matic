@@ -1,9 +1,10 @@
 from typing import Union
 from fastapi import FastAPI
 from src.redis_interface import RedisInterface
+import os
 
 app = FastAPI()
-f = RedisInterface()
+f = RedisInterface(host= os.getenv('REDIS_ADDRESS'))
 
 @app.get("/ping")
 def ping():

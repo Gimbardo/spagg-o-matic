@@ -6,10 +6,11 @@ import wikipediaapi
 from src.redis_interface import RedisInterface
 from src.fact import Fact
 import logging
+import os
 
 class Syncher:
   def __init__(self):
-    self.redisInterface = RedisInterface()
+    self.redisInterface = RedisInterface(host= os.getenv('REDIS_ADDRESS'))
 
   def synch(self):
     logging.info("Synching daily facts")
