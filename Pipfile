@@ -9,9 +9,12 @@ uvicorn = {extras = ["standard"], version = "*"}
 redis = "*"
 requests = "*"
 wikipedia-api = "*"
-schedule = "*"
 
 [dev-packages]
 
 [requires]
 python_version = "3.10"
+
+[scripts]
+main = "python main.py"
+sync = "python sync_redis.py"

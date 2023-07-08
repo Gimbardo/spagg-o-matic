@@ -1,7 +1,7 @@
 
 class Fact:
   def __init__(self, content):
-    content = content.replace("–","-")
+    content = content.replace("–", "-")
     self.year = content.split("-")[0].strip()
     self.info = '-'.join(content.split("-")[1:])[1:]
 

@@ -1,15 +1,17 @@
 from typing import Union
 from fastapi import FastAPI
 from src.redis_interface import RedisInterface
-import os
+from constants import *
 
 app = FastAPI()
-f = RedisInterface(host= os.getenv('REDIS_ADDRESS'))
+f = RedisInterface(host=REDIS_ADDRESS)
+
 
 @app.get("/ping")
 def ping():
-  return {"content": "pong"}
+    return {"content": "pong"}
 
-@app.get("/daily_fact")
+
+@app.get("/")
 def daily_fact():
-  return f.random_fact()
+    return f.random_fact()

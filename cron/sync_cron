@@ -1,0 +1,1 @@
+* * * * * /usr/local/bin/python /spaggomatic/sync_redis.py >> /var/log/cron.log 2>&1

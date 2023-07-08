@@ -5,33 +5,41 @@
 # spagg-o-matic
 spagg-o-matic saves from Wikipedia random daily facts, stores them into Redis, and serves them via API
 
-## Already hosted by myself:
+## Already hosted by myself
 
-https://api.gimbaro.dev/daily_fact
+https://spaggomatic.gimbaro.dev
 
-## Requiremens
-Just Python3, Pipenv, and Redis
+## Docs
 
----
+return example:
+
+```json
+{
+  "fact": "Just a random Fact",
+  "year": "1999"
+}
+
+```
+
+## Requirements
+
+Just Python3, Pipenv, and Redis (or Docker and nothing else)
 
 ### Setup
 
 #### without Docker
-Just setup pipenv:
-- pipenv install / pipenv sync
+
+``` shell
+  pipenv install
+  pipenv run main
+```
+
+**NB**: Docker handles cron, to sync 
 
 #### with Docker
-- docker compose build
-
----
-
-### Host spagg-o-matic
-
-#### without Docker
-To host spagg-o-matic just launch main.py, via pipenv:
-- pipenv run main.py
-
-#### with Docker
-- docker compose up
+``` shell
+  docker compose build
+  docker compose up
+```
 
 ---

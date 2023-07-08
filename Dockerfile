@@ -10,6 +10,10 @@ COPY . .
 
 RUN pipenv install --system --deploy
 
-EXPOSE 80
+RUN apt-get update && apt-get -y install cron
+COPY cron/sync_cron /etc/cron.d/sync_cron
+RUN chmod 0644 /etc/cron.d/sync_cron
+RUN crontab /etc/cron.d/sync_cron
 
-CMD python main.py
+EXPOSE 80
+CMD cron && python main.py
