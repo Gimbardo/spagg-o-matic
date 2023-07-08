@@ -18,7 +18,7 @@ class Syncher:
         month = today.strftime("%B")
         day = today.strftime("%d")
 
-        wikipedia = wikipediaapi.Wikipedia('en')
+        wikipedia = wikipediaapi.Wikipedia(f'#{PROJECT_NAME} (#{EMAIL})', 'en')
         page = f'{month}_{day}'
         wiki_page = wikipedia.page(page)
         logging.info(f"Retrieving {page}")
