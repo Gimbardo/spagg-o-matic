@@ -6,6 +6,8 @@ services:
       - "3000:80"
     volumes:
       - .:/spaggomatic
+    depends_on:
+      - redis
   redis:
     image: redis
     command: redis-server
